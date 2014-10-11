@@ -1,0 +1,37 @@
+{
+  "name": "wordcloud",
+  "description": "A word cloud experiment.",
+  "main": "index.html",
+  "license": [
+    {
+      "type": "WTFPL",
+      "url": ""
+    }
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": "word, cloud, tag",
+  "authors": [
+    {
+      "name": "jsDotCr"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsDotCr/wordcloud.git"
+  },
+  "dependencies": {
+    "domReady": "git://github.com/requirejs/domReady.git#~2.0.1",
+    "requirejs": "~2.1.14",
+    "requirejs-plugins": "~1.0.2",
+    "handlebars": "~2.0.0",
+    "normalize.css": "~3.0.2",
+    "zepto": "~1.1.4"
+  },
+  "private": true
+}
