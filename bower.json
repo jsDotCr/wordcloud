@@ -1,6 +1,6 @@
 {
-  "name": "wordcloud",
-  "description": "A word cloud experiment.",
+  "name": "wordscloud",
+  "description": "A words' cloud experiment.",
   "main": "index.html",
   "license": [
     {
@@ -15,7 +15,7 @@
     "test",
     "tests"
   ],
-  "keywords": "word, cloud, tag",
+  "keywords": "words, cloud, tag",
   "authors": [
     {
       "name": "jsDotCr"
@@ -31,7 +31,10 @@
     "requirejs-plugins": "~1.0.2",
     "handlebars": "~2.0.0",
     "normalize.css": "~3.0.2",
-    "zepto": "~1.1.4"
+    "zepto": "~1.1.4",
+    "layoutmanager": "~0.9.5",
+    "jquery": "~2.1.1",
+    "marionette": "~2.2.1"
   },
   "private": true
 }

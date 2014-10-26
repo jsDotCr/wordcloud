@@ -1,8 +1,8 @@
 {
-  "name": "wordcloud",
-  "description": "A word cloud experiment.",
+  "name": "wordscloud",
+  "description": "A words' cloud experiment.",
   "version": "0.0.0",
-  "keywords": "word, cloud, tag",
+  "keywords": "words, cloud, tag",
   "maintainers": [
     {
       "name": "jsDotCr"

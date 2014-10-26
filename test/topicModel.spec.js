@@ -1,8 +1,7 @@
-/*global describe, before, it*/
+/*global describe, before, it, expect*/
 
 define(function(require) {
-  var index = require('index');
-  var TopicModel = require('topics/TopicModel');
+  var TopicModel = require('models/Topic');
 
   describe('Topic model', function() {
     before(function(){
