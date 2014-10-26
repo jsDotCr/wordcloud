@@ -1,3 +1,93 @@
 body {
-  font: Calibri, Helvetica, Arial, sans-serif;
+  font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+
+
+
+
+a {
+  text-decoration: none;
+}
+a:active, a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+.t--centered {
+  text-align: center;
+}
+
+
+
+.col {
+  box-sizing: border-box;
+  display: inline;
+  float: left;
+  padding: 0 1em;
+}
+.col--full {
+  width: 100%;
+}
+.col--none {
+  width: 0;
+}
+.col--onethird {
+  width: 25%;
+  transition: width 0.25s ease-in;
+}
+.col--twothirds {
+  width: 75%;
+  transition: width 0.25s ease-in;
+}
+.col--last:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+
+
+
+
+.sentiment {
+  color: #666;
+}
+.sentiment--cool {
+  color: #6f6;
+}
+.sentiment--bad {
+  color: #f66;
+}
+
+
+
+
+
+.tag {
+  font-weight: bold;
+  padding: 0 0.25em;
+}
+.tag--size1 {
+  font-size: 0.75em;
+}
+.tag--size2 {
+  font-size: 1em;
+}
+.tag--size3 {
+  font-size: 1.25em;
+}
+.tag--size4 {
+  font-size: 1.75em;
+  padding: 0 0.5em;
+}
+.tag--size5 {
+  font-size: 2em;
+  padding: 0 0.5em;
+}
+.tag--size6 {
+  font-size: 2.5em;
+  padding: 0 0.5em;
 }

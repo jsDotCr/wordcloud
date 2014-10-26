@@ -5,8 +5,9 @@ require.config({
     text: '../../bower_components/requirejs-plugins/lib/text',
     handlebars: '../../bower_components/handlebars/handlebars',
     backbone: '../../bower_components/backbone/backbone',
+    marionette: '../../bower_components/marionette/lib/backbone.marionette',
     underscore: '../../bower_components/underscore/underscore',
-    jquery: '../../bower_components/zepto/zepto'
+    jquery: '../../bower_components/jquery/dist/jquery'
   },
   shim: {
     jquery: {

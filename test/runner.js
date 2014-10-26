@@ -1,6 +1,6 @@
 var tests = [];
 for (var file in window.__karma__.files) {
-  if (/\.spec\.js$/.test(file)) {
+  if (/\/base\/test\/.*\.spec\.js$/.test(file)) {
     tests.push(file);
   }
 }
@@ -14,8 +14,9 @@ requirejs.config({
     text: '../../bower_components/requirejs-plugins/lib/text',
     handlebars: '../../bower_components/handlebars/handlebars',
     backbone: '../../bower_components/backbone/backbone',
+    marionette: '../../bower_components/marionette/lib/backbone.marionette',
     underscore: '../../bower_components/underscore/underscore',
-    jquery: '../../bower_components/zepto/zepto',
+    jquery: '../../bower_components/jquery/dist/jquery',
     chai: '../../node_modules/chai/chai',
     //'chai-backbone': '../../node_modules/chai-backbone/chai-backbone',
     sinon: '../../node_modules/sinon/lib/sinon'
