@@ -1,3 +1,5 @@
+/* global define */
+
 define(['backbone'], function(Backbone) {
   "use strict";
   return Backbone.Model.extend({
@@ -27,7 +29,7 @@ define(['backbone'], function(Backbone) {
       'queries': [ ]
     },
 
-    validate: function(attrs, options){
+    validate: function(attrs){
       if (!attrs.id){
         throw new Error('No ID no party');
       }

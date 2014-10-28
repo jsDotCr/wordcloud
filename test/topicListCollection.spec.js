@@ -1,4 +1,4 @@
-/*global describe, before, it, expect*/
+/*global define, describe, before, it, expect*/
 
 define(function(require) {
   var TopicsCollection = require('collections/TopicList');

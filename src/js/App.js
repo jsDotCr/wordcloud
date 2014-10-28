@@ -1,4 +1,6 @@
-define('App', ['backbone', 'marionette', './AppRouter'],
+/* global define */
+
+define('App', ['backbone', 'marionette', 'AppRouter'],
   function(Backbone, Marionette, AppRouter) {
   "use strict";
 
@@ -10,7 +12,7 @@ define('App', ['backbone', 'marionette', './AppRouter'],
     });
 
     WordsCloud.addInitializer(function () {
-      new AppRouter({
+      var appRouter = new AppRouter({
         App: this
       });
     });

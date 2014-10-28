@@ -1,5 +1,4 @@
-require(['config'], function() {
-  require(['App'], function(App) {
+require(['App'], function(App) {
+  "use strict";
     App.start();
-  });
 });

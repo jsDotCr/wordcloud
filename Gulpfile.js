@@ -21,6 +21,9 @@ var paths = {
 
 
 gulp.task('css', function() {
+  gulp.src('bower_components/normalize.css/normalize.css')
+    .pipe(gulp.dest('build/bower_components/normalize.css'));
+
   return gulp.src(paths.css)
     .pipe(csslint('.csslintrc'))
     .pipe(csslint.reporter())
@@ -38,19 +41,24 @@ gulp.task('rjs', ['scripts'], function(){
   rjs({
     mainConfigFile: 'src/js/config.js',
     baseUrl: 'src/js',
-    name: 'config',
-    out: 'js/wordcloud.js'
+    name: 'index',
+    out: 'js/wordscloud.js'
   })
     .pipe(gulp.dest('build/'));
 });
 
-gulp.task('buildscripts', ['rjs'], function () {
+gulp.task('copyscripts', ['rjs'], function(){
+  return gulp.src(['bower_components/requirejs/require.js', 'src/js/config.js', 'build/js/wordscloud.js'])
+    .pipe(gulp.dest('build/js'));
+});
+
+gulp.task('buildscripts', ['copyscripts'], function () {
   var target = gulp.src('src/index.html');
-  var sources = gulp.src(['bower_components/requirejs/require.js', 'build/js/wordcloud.js'], { read: false });
+  var src = gulp.src(['build/js/require.js', 'build/js/config.js', 'build/js/wordscloud.js'], { read: false });
 
   return target
-    .pipe(inject(sources))
-    .pipe(gulp.dest('build'));
+    .pipe(inject(src, { relative: true }))
+    .pipe(gulp.dest('build/'));
 });
 
 gulp.task('build', ['css', 'buildscripts'], function() {
@@ -90,6 +98,7 @@ gulp.task('test', function (done) {
     files: [
       {pattern: 'node_modules/chai/**/*.js', included: false},
       {pattern: 'node_modules/sinon/lib/**/*.js', included: false},
+      {pattern: 'node_modules/squirejs/src/*.js', included: false},
       //'node_modules/sinon-chai/lib/sinon-chai.js',
       //'node_modules/chai-backbone/chai-backbone.js',
       {pattern: 'bower_components/**/*.js', included: false},
@@ -100,4 +109,5 @@ gulp.task('test', function (done) {
   }, done);
 });
 
-gulp.task('default', ['serve', 'watch']);
+gulp.task('dev', ['serve', 'watch']);
+gulp.task('prod', ['serve', 'build']);

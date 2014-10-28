@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>wordsCloud</title>
-  <!-- build:css css/wordcloud.css -->
+  <!-- build:css css/wordscloud.css -->
   <link rel="stylesheet" href="../bower_components/normalize.css/normalize.css">
   <link rel="stylesheet" href="../build/css/modules/index.css">
   <!-- endbuild -->
@@ -12,24 +12,33 @@
   <![endif]-->
 </head>
 <body>
-  <header>
-    <h1>wordsCloud</h1>
+  <header class="header">
+    <h1 class="header__title">wordsCloud</h1>
   </header>
 
   <!-- The tag cloud -->
-  <main id="cloud" class="col col--full t--centered">
+  <main id="cloud" class="[ col__primary ] t--centered">
 
   </main>
 
-  <!-- Details about the clicked word -->
-  <aside class="col col--none col--last">
+  <!-- Details about the focused topic -->
+  <aside class="[ col__secondary col--last ]">
 
   </aside>
 
-  <!-- build:js ../js/worldcloud.dist.js js/worldcloud.dist.js -->
-  <!-- inject:js -->
-  <script data-main="js/index" src="../bower_components/requirejs/require.js"></script>
-  <!-- endinject -->
+  <!-- build:js js/wordscloud.dist.js  -->
+  <!-- inject:js -->  <!-- endinject -->
+  <!-- endbuild -->
+
+  <!-- build:remove -->
+  <script src="../bower_components/requirejs/require.js"></script>
+  <script>
+    require(['js/config'], function() {
+      require(['index'], function() {
+
+      });
+    });
+  </script>
   <!-- endbuild -->
 </body>
 </html>

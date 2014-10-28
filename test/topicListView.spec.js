@@ -6,11 +6,18 @@ define(function(require) {
 
   describe('Topic list view', function() {
     before(function(){
-      this.collection = new TopicListCollection([{label: 'fake1', sentimentScore: 19}, {label: 'fake2', sentimentScore: 47}]);
-      var controller = Marionette.Object.extend();
+      this.collection = new TopicListCollection([
+        {
+          label: 'fake1',
+          sentimentScore: 19
+        },
+        {
+          label: 'fake2',
+          sentimentScore: 47
+        }
+      ]);
       this.view = new TopicListView({
-        collection: this.collection,
-        controller: new controller()
+        collection: this.collection
       });
     });
 
@@ -37,3 +44,11 @@ define(function(require) {
   });
 });
 
+
+/*
+
+ it('should render a view in the cloud region', function() {
+ var view = this.cloudFakeRegion.firstCall.args[0];
+ expect(view.$el.text()).to.contain('wonderful fakeTopic');
+ });
+ */

@@ -1,4 +1,5 @@
 require.config({
+  baseUrl: 'js',
   paths : {
     json: '../../bower_components/requirejs-plugins/src/json',
     domReady: '../../bower_components/domReady/domReady',

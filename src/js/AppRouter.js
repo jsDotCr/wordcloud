@@ -1,4 +1,6 @@
-define(['marionette', './controllers/Topics'], function(Marionette, Topics) {
+/* global define */
+
+define(['marionette', 'controllers/Topics'], function(Marionette, Topics) {
   "use strict";
 
   return Marionette.AppRouter.extend({
@@ -6,11 +8,13 @@ define(['marionette', './controllers/Topics'], function(Marionette, Topics) {
       '': 'topics',
       'detail/:id': 'showDetail'
     },
+
     topics: function() {
       this.topicsController = new Topics({
         App: this.options.App
       });
     },
+
     showDetail: function(id){
       if (!this.topicsController){
         this.topics();

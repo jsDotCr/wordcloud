@@ -18,9 +18,7 @@ requirejs.config({
     underscore: '../../bower_components/underscore/underscore',
     jquery: '../../bower_components/jquery/dist/jquery',
     chai: '../../node_modules/chai/chai',
-    //'chai-backbone': '../../node_modules/chai-backbone/chai-backbone',
     sinon: '../../node_modules/sinon/lib/sinon'
-    //'sinon-chai': '../../node_modules/sinon-chai/lib/sinon-chai'
   },
 
   shim: {

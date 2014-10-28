@@ -1,5 +1,6 @@
 body {
   font-family: Calibri, Helvetica, Arial, sans-serif;
+  overflow: hidden;
 }
 
 
@@ -22,25 +23,26 @@ a:active, a:hover {
 
 
 
-.col {
+
+
+.col__primary, .col__secondary {
   box-sizing: border-box;
-  display: inline;
   float: left;
   padding: 0 1em;
 }
-.col--full {
+.col__primary {
   width: 100%;
 }
-.col--none {
-  width: 0;
-}
-.col--onethird {
-  width: 25%;
-  transition: width 0.25s ease-in;
-}
-.col--twothirds {
+.col__primary--shrinked {
   width: 75%;
-  transition: width 0.25s ease-in;
+}
+.col__secondary {
+  transform: translateX(100%);
+  width: 25%;
+}
+.col__secondary--visible {
+  transform: translateX(0);
+  transition: 0.15s ease-in;
 }
 .col--last:after {
   clear: both;
@@ -51,15 +53,29 @@ a:active, a:hover {
 
 
 
+.header {
+  background-color: #4ECDC4;
+  margin-bottom: 2.5em;
+  padding: 0.75em 1.25em;
+}
+.header__title {
+  color: #FFF;
+  letter-spacing: 0.075em;
+  margin: 0;
+}
+
+
+
+
 
 .sentiment {
-  color: #666;
+  color: #556270;
 }
 .sentiment--cool {
-  color: #6f6;
+  color: #7FC7AF;
 }
 .sentiment--bad {
-  color: #f66;
+  color: #FF3D7F;
 }
 
 
@@ -90,4 +106,23 @@ a:active, a:hover {
 .tag--size6 {
   font-size: 2.5em;
   padding: 0 0.5em;
+}
+
+
+
+
+
+.spotlight {
+  border: 3px solid #3FB8AF;
+  border-radius: 0 1em 1em 1em;
+  margin: 0 1em;
+}
+.spotlight__title {
+  margin: 0;
+  padding: 1em;
+  background: #3FB8AF;
+  color: #FFF;
+}
+.spotlight__content {
+  padding: 0 1em;
 }
