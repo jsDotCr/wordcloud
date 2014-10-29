@@ -16,7 +16,7 @@ There are two different versions of the project: developer and production.
 To see the dev-version, please run:
 
 ```bash
-gulp prod
+gulp dev
 ```
 
 And load then http://localhost:8767/src/
